@@ -1,8 +1,13 @@
 import React, { useState } from "react"
 import GiphySearch from "../giphySearch/GiphySearch"
 
-const PostForm=({visibility})=>{
+const PostForm=({visibility,inputHandler,postData,addPost})=>{
+
     const[gif,setGif]=useState(false)
+    
+
+
+
 
     const gifClickHandler=()=>{
         gif?setGif(false):setGif(true)
@@ -11,14 +16,14 @@ const PostForm=({visibility})=>{
 
     return(
         <div className={visibility?"postForm":"none"}>
-            <div className="postInput"> <input  placeholder="Hello World"/></div>
+            <div className="postInput"> <input  placeholder="Hello World" onChange={inputHandler} value={postData.post} name="post"/></div>
             <div className="gif-add"></div>
             {gif && <GiphySearch/>}
             
            
             <div className="buttons">
                 <button onClick={gifClickHandler}>GIF</button>
-                <button>Post</button>
+                <button onClick={addPost}>Post</button>
 
             </div>
 
