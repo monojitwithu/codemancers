@@ -1,0 +1,20 @@
+
+
+.gif-search-Container{
+    padding: 10px;
+    position: absolute;
+    right: 101px;
+    max-width: 490px;
+    top: 66px;
+    background: blueviolet;
+    border-radius: 5px;
+    .imgs{
+        max-height: 211px;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    input{
+        border-radius: 27px
+    }
+}

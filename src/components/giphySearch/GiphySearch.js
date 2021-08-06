@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from "react"
 import { getGifs } from '../helpers/GetGifs'
 
-const GiphySearch=()=>{
+const GiphySearch=({ gifClickHandler})=>{
     const [data,setData]=useState()
     const[input,setInput]=useState("")
+    
 
     
     useEffect(()=>{
         getGifs(input)
         .then((rs)=>setData(rs))
-    },[input])
+    },[input.length>3])
 
     console.log(data)
 
 
 
     return(
-        <div>
+        <div className="gif-search-Container">
             <input placeholder="Seach Here" onChange={(e)=>setInput(e.target.value)} value={input}/>
-            {data && data.map((x)=><img src={x.url}/>
+            <div className="imgs">
+            {data && data.map((x)=><img style={{width:"145px",padding:"3px"}} src={x.url}  onClick={()=> gifClickHandler(x.url)}/>
             
         
             )}
+                
+            </div>
+            
+            
 
 
         </div>

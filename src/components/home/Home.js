@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import CreatePost from "../createpost/CreatePost"
+import Post from "../post/Post"
 import PostForm from "../postForm/PostForm"
 
 const Home=()=>{
@@ -17,8 +18,10 @@ const Home=()=>{
         
 
     }
-    const gitClickHandler=(url)=>{
+    const[currentgif,setcurrentgif]=useState("")
+    const gifClickHandler=(url)=>{
         setPostData({...postData,img:url})
+        setcurrentgif(url)
 
 
     }
@@ -26,6 +29,10 @@ const Home=()=>{
 
     const addPost=()=>{
         setData([...data,postData])
+        setvisibility(false)
+        setcurrentgif("")
+        setPostData({post:"",
+    img:""})
 
     }
 
@@ -35,6 +42,7 @@ const Home=()=>{
 
     const postClickHandler=()=>{
         visibility?setvisibility(false):setvisibility(true)
+
     }
 
 
@@ -44,10 +52,11 @@ const Home=()=>{
             <CreatePost postClickHandler={postClickHandler}/>
 
             </div>
-            <PostForm  visibility={visibility}  postData={postData} inputHandler={inputHandler} addPost={addPost}/>
+            <PostForm  visibility={visibility}  postData={postData} inputHandler={inputHandler} addPost={addPost}  gifClickHandler={gifClickHandler} currentgif={currentgif}/>
             {
                 data && data.map((x)=><img src={x.img}></img>)
             }
+            <Post/>
             
             
 

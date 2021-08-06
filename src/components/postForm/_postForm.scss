@@ -15,10 +15,35 @@
 
 
     }
+    .gif-add{
+        img{
+            height: 248px;
+            width: 484px;
+            border-radius: 11px;
+        }
+    }
     .buttons{
+        
         justify-content: space-around;
-    display: flex;
+       display: flex;
+      
 }
+    .gif-btn{
+        cursor: pointer;
+        border-radius: 50%;
+
+    }
+    .post-btn{
+        cursor: pointer;
+        color: white;
+        background: #0C86EE;
+        font-weight: 700;
+        
+    width: 438px;
+    height: 34px;
+    border-radius: 18px;
+
+    }
     }
 
     .none{
