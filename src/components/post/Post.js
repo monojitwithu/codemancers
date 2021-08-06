@@ -1,12 +1,13 @@
 import React from "react"
-import Image from './logo-design-golden-ratio-infinity.gif'
 
-const Post=()=>{
+
+const Post=({post,url})=>{
 
     return(
         <div className="post">
-            <p>hello My name is Monojit Das </p>
-            <img src={Image}/>
+            <p>{post}</p>
+            {url&& <img src={url} alt="gif"/>}
+            
 
         </div>
     )

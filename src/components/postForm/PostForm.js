@@ -17,8 +17,8 @@ const PostForm=({visibility,inputHandler,postData,addPost,gifClickHandler,curren
 
     return(
         <div className={visibility?"postForm":"none"}>
-            <div className="postInput"> <input  placeholder="Hello World" onChange={inputHandler} value={postData.post} name="post"/></div>
-            <div className="gif-add"><img src={currentgif}/></div>
+            <div className="postInput"> <input className="inputs"  placeholder="What's on your mind ?" onChange={inputHandler} value={postData.post} name="post"/></div>
+            <div className="gif-add">{currentgif&& <img src={currentgif}/>}</div>
             {gif && <GiphySearch  gifClickHandler={ gifClickHandler} />}
             
            

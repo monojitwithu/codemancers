@@ -54,9 +54,9 @@ const Home=()=>{
             </div>
             <PostForm  visibility={visibility}  postData={postData} inputHandler={inputHandler} addPost={addPost}  gifClickHandler={gifClickHandler} currentgif={currentgif}/>
             {
-                data && data.map((x)=><img src={x.img}></img>)
+                data && data.map((x)=><Post post={x.post} url={x.img}/>)
             }
-            <Post/>
+            
             
             
 

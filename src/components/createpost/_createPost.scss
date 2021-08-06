@@ -1,5 +1,5 @@
 .createPost{
-    background: #C2C3C5;
+    background:white;
     height: 12px;
     width: 487px;
     display: flex;
@@ -9,4 +9,21 @@
     margin-top: 18px;
     padding: 14px;
     border-radius: 4px;
+    box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.75);
+
+.compose-post{
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #C2C3C5;;
+    cursor: pointer;
+}
+.cros{
+    font-family: sans-serif;
+    font-size: x-large;
+    color: darkgray;
+    cursor: pointer;
+}
 }

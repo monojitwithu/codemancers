@@ -18,9 +18,9 @@ const GiphySearch=({ gifClickHandler})=>{
 
     return(
         <div className="gif-search-Container">
-            <input placeholder="Seach Here" onChange={(e)=>setInput(e.target.value)} value={input}/>
+            <input placeholder="Seach Here" onChange={(e)=>setInput(e.target.value)} value={input} className="inputs"/>
             <div className="imgs">
-            {data && data.map((x)=><img style={{width:"145px",padding:"3px"}} src={x.url}  onClick={()=> gifClickHandler(x.url)}/>
+            {data && data.map((x)=><img style={{width:"145px",padding:"3px",cursor:"pointer"}} src={x.url}  onClick={()=> gifClickHandler(x.url)}/>
             
         
             )}
