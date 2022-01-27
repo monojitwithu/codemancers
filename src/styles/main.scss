@@ -1,19 +1,16 @@
 @import "../components/createpost/createPost";
 @import "../components/home/home";
 @import "../components/postForm/postForm";
-@import '../components/giphySearch/giphySearch';
-@import '../components/post/post';
+@import "../components/giphySearch/giphySearch";
+@import "../components/post/post";
 
-
-body{
-    margin: 0;
-    background: #F0F2F5;
-    input{
-        background: #F0F2F5;
-        
-    }
-    .inputs:hover{
-        background: #E4E6E9;
-    }
-    
+body {
+  margin: 0;
+  background: #f0f2f5;
+  input {
+    background: #f0f2f5;
+  }
+  .inputs:hover {
+    background: #e4e6e9;
+  }
 }
